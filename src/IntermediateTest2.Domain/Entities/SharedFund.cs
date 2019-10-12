@@ -8,5 +8,7 @@ namespace IntermediateTest2.Domain.Entities
         public int EmployeeId { get; set; }
         public decimal Value { get; set; }
         public DateTime ContributionDate { get; set; }
+
+        public Employee Employee { get; set; }
     }
 }

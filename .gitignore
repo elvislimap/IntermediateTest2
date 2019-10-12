@@ -7,3 +7,9 @@
 /src/IntermediateTest2.Domain/obj
 /tests/IntermediateTest2.Domain.Tests/bin/Debug/netcoreapp2.2
 /tests/IntermediateTest2.Domain.Tests/obj
+/src/IntermediateTest2.Infra.CrossCutting.Ioc/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Infra.CrossCutting.Ioc/obj
+/src/IntermediateTest2.Infra.Data/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Infra.Data/obj
+/src/IntermediateTest2.Service.Api/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Service.Api/obj
