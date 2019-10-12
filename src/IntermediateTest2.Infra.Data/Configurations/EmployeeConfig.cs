@@ -11,9 +11,9 @@ namespace IntermediateTest2.Infra.Data.Configurations
             builder.HasKey(e => e.EmployeeId);
             builder.Property(e => e.EmployeeId).HasColumnType("int").ValueGeneratedOnAdd();
 
-            builder.Property(e => e.Name).HasColumnType("varchar(100)").HasMaxLength(100);
-            builder.Property(e => e.BirthDate).HasColumnType("datetime");
-            builder.Property(e => e.MonthlySalary).HasColumnType("decimal(10,2)");
+            builder.Property(e => e.Name).HasColumnType("varchar(100)").HasMaxLength(100).IsRequired();
+            builder.Property(e => e.BirthDate).HasColumnType("datetime").IsRequired();
+            builder.Property(e => e.MonthlySalary).HasColumnType("decimal(10,2)").IsRequired();
         }
     }
 }

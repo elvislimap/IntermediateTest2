@@ -14,7 +14,8 @@ namespace IntermediateTest2.Service.Api.Commons
             services.AddCors();
 
             services.AddDbContext<ContextEf>(
-                opt => opt.UseSqlServer(configuration.GetConnectionString("IntermediateContext")));
+                opt => opt.UseSqlServer(configuration.GetConnectionString("IntermediateContext"),
+                b => b.MigrationsAssembly("IntermediateTest2.Service.Api")));
 
             services.AddMvc()
                 .AddJsonOptions(opt => opt.SerializerSettings.ContractResolver = new DefaultContractResolver())
