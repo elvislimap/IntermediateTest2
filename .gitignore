@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/IntermediateTest2/v16
+/src/IntermediateTest2.Domain/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Domain/obj
+/tests/IntermediateTest2.Domain.Tests/bin/Debug/netcoreapp2.2
+/tests/IntermediateTest2.Domain.Tests/obj
