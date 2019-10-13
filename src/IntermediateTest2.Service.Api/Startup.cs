@@ -19,6 +19,7 @@ namespace IntermediateTest2.Service.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.RegisterServicesSwagger();
             services.RegisterServicesApi(Configuration);
             services.RegisterServicesIoc();
         }
@@ -28,6 +29,7 @@ namespace IntermediateTest2.Service.Api
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
+            app.RegisterApplicationSwagger();
             app.UseExceptionHandler(config => config.DefaultExceptionHandler());
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();

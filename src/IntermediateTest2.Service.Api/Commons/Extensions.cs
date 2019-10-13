@@ -3,12 +3,14 @@ using IntermediateTest2.Infra.Data.Context;
 using IntermediateTest2.Infra.Security.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
+using Swashbuckle.AspNetCore.Swagger;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -33,6 +35,28 @@ namespace IntermediateTest2.Service.Api.Commons
             services.AddMvc(opt => opt.Filters.Add(new AuthorizeFilter(authorizationPolicy)))
                 .AddJsonOptions(opt => opt.SerializerSettings.ContractResolver = new DefaultContractResolver())
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        }
+
+        public static void RegisterServicesSwagger(this IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                options.DescribeAllEnumsAsStrings();
+
+                options.SwaggerDoc("v1", new Info
+                {
+                    Title = "IntermediateTest2 - HTTP API",
+                    Version = "v1"
+                });
+            });
+        }
+
+        public static void RegisterApplicationSwagger(this IApplicationBuilder app)
+        {
+            app.UseSwagger().UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+            });
         }
 
         public static Task<ObjectResult> TaskResult(this ResponseToken responseToken)
