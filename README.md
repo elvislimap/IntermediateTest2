@@ -18,6 +18,8 @@ Recursos utilizados no projeto:
 - SOLID - Boas práticas de programação orientada a objetos
 - Swagger - Documentação da API
 
+Regras para saque:
+-------------------------------
 
 | Balance                     | % Limit | Fixed money |
 |-----------------------------|---------|-------------|
