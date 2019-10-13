@@ -6,7 +6,9 @@ Solução realizada:
 - Cadastro de funcionários com valor do salário para realizar o cálculo de 8% do fundo compartilhado
 - Cadastro de ajuste de inflação para realizar os cálculos de reajustes mensalmente de acordo com a taxa do mês corrente
 - Cadastro do fundo compartilhado
-- Saque do fundo compartilhado quando aniversário do funcionário. Obtém o saldo total, identifica o valor fixo a receber somando com o valor recuperado a partir do percentual de limite do saldo total de acordo com a tabela no fim do documento.
+- Saque do fundo compartilhado 1 vez quando aniversário do funcionário. Obtém o saldo total, identifica o valor fixo a receber somando com o valor recuperado a partir do percentual de limite do saldo total de acordo com a tabela no fim do documento.
+
+OBS: Ao cadastrar um fundo compartilhado, informar apenas o EmployeeId e ContributionDate. O valor do fundo é calculado de acordo com o salário do funcionário, caso infome o valor o serviço retornará BadRequest.
 
 Recursos utilizados no projeto:
 -------------------------------
