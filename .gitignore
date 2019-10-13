@@ -20,3 +20,5 @@
 /src/IntermediateTest2.Infra.Security/obj
 /tests/IntermediateTest2.Application.Tests/bin/Debug/netcoreapp2.2
 /tests/IntermediateTest2.Application.Tests/obj
+/tests/IntermediateTest2.Service.Api.Tests/obj
+/tests/IntermediateTest2.Service.Api.Tests/bin/Debug/netcoreapp2.2
