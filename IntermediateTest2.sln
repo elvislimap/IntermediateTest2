@@ -7,23 +7,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domains", "3 - Domains"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{6624D3E4-197A-4223-9E6F-832442A598E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Applications", "2 - Applications", "{A93EBCEE-0F5F-4754-969F-9EE70BE883D8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infras", "4 - Infras", "{278DA791-D2E1-4135-988B-435002C536DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Domain", "src\IntermediateTest2.Domain\IntermediateTest2.Domain.csproj", "{A18AD155-B5F7-4596-B8F8-18B2860F7AA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntermediateTest2.Domain", "src\IntermediateTest2.Domain\IntermediateTest2.Domain.csproj", "{A18AD155-B5F7-4596-B8F8-18B2860F7AA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Domain.Tests", "tests\IntermediateTest2.Domain.Tests\IntermediateTest2.Domain.Tests.csproj", "{732EA09E-DFDD-49EF-9124-ADC3B659A8C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntermediateTest2.Domain.Tests", "tests\IntermediateTest2.Domain.Tests\IntermediateTest2.Domain.Tests.csproj", "{732EA09E-DFDD-49EF-9124-ADC3B659A8C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Data", "Infra.Data", "{C34E8A98-2F7B-4B28-B036-E7D99B3257A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Infra.Data", "src\IntermediateTest2.Infra.Data\IntermediateTest2.Infra.Data.csproj", "{2430E53D-5C5B-4A9D-9AB5-F268AF1DF8BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntermediateTest2.Infra.Data", "src\IntermediateTest2.Infra.Data\IntermediateTest2.Infra.Data.csproj", "{2430E53D-5C5B-4A9D-9AB5-F268AF1DF8BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Service.Api", "src\IntermediateTest2.Service.Api\IntermediateTest2.Service.Api.csproj", "{DB9A1D29-C5A1-4508-A502-852D26B2B5E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntermediateTest2.Service.Api", "src\IntermediateTest2.Service.Api\IntermediateTest2.Service.Api.csproj", "{DB9A1D29-C5A1-4508-A502-852D26B2B5E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.CrossCutting", "Infra.CrossCutting", "{D31C755C-69CF-4660-A867-FFB69649C3C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Infra.CrossCutting.Ioc", "src\IntermediateTest2.Infra.CrossCutting.Ioc\IntermediateTest2.Infra.CrossCutting.Ioc.csproj", "{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntermediateTest2.Infra.CrossCutting.Ioc", "src\IntermediateTest2.Infra.CrossCutting.Ioc\IntermediateTest2.Infra.CrossCutting.Ioc.csproj", "{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Applications", "2 - Applications", "{AD67ACC8-58C4-40AE-8D85-1F94B5C25D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Application", "src\IntermediateTest2.Application\IntermediateTest2.Application.csproj", "{A7625E6F-BA49-44BF-8859-01C6BE436534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Application.Tests", "tests\IntermediateTest2.Application.Tests\IntermediateTest2.Application.Tests.csproj", "{49C7976D-5CBF-4BA2-971F-6715F3B54DB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Security", "Infra.Security", "{DF769542-CB54-4F5D-8496-98955EFCA017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediateTest2.Infra.Security", "src\IntermediateTest2.Infra.Security\IntermediateTest2.Infra.Security.csproj", "{85441962-C210-4AA2-9F65-E9501E5F9FD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +59,18 @@ Global
 		{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7625E6F-BA49-44BF-8859-01C6BE436534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7625E6F-BA49-44BF-8859-01C6BE436534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7625E6F-BA49-44BF-8859-01C6BE436534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7625E6F-BA49-44BF-8859-01C6BE436534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C7976D-5CBF-4BA2-971F-6715F3B54DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C7976D-5CBF-4BA2-971F-6715F3B54DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C7976D-5CBF-4BA2-971F-6715F3B54DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C7976D-5CBF-4BA2-971F-6715F3B54DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85441962-C210-4AA2-9F65-E9501E5F9FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85441962-C210-4AA2-9F65-E9501E5F9FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85441962-C210-4AA2-9F65-E9501E5F9FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85441962-C210-4AA2-9F65-E9501E5F9FD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +83,10 @@ Global
 		{DB9A1D29-C5A1-4508-A502-852D26B2B5E5} = {6624D3E4-197A-4223-9E6F-832442A598E8}
 		{D31C755C-69CF-4660-A867-FFB69649C3C2} = {278DA791-D2E1-4135-988B-435002C536DE}
 		{4F5C9249-5EC6-4160-BEF1-7AE325F60BAE} = {D31C755C-69CF-4660-A867-FFB69649C3C2}
+		{A7625E6F-BA49-44BF-8859-01C6BE436534} = {AD67ACC8-58C4-40AE-8D85-1F94B5C25D62}
+		{49C7976D-5CBF-4BA2-971F-6715F3B54DB7} = {AD67ACC8-58C4-40AE-8D85-1F94B5C25D62}
+		{DF769542-CB54-4F5D-8496-98955EFCA017} = {278DA791-D2E1-4135-988B-435002C536DE}
+		{85441962-C210-4AA2-9F65-E9501E5F9FD6} = {DF769542-CB54-4F5D-8496-98955EFCA017}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83D2B440-314F-4E05-947B-6AEA11FA4A1A}

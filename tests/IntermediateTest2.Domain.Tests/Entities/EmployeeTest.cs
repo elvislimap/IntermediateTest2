@@ -1,7 +1,6 @@
 ﻿using IntermediateTest2.Domain.Entities;
 using IntermediateTest2.Domain.Validations;
 using System;
-using System.Linq;
 using Xunit;
 
 namespace IntermediateTest2.Domain.Tests.Entities
@@ -18,20 +17,17 @@ namespace IntermediateTest2.Domain.Tests.Entities
                 MonthlySalary = 7000M
             };
 
-            var validationErrors = employee.IsValid();
-
+            Assert.True(employee.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.False(validationErrors.Any());
         }
 
         [Fact]
         public void Employee_InvalidRequired()
         {
             var employee = new Employee();
-            var validationErrors = employee.IsValid();
 
+            Assert.False(employee.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.True(validationErrors.Any());
             Assert.Equal(3, validationErrors.Count);
         }
 
@@ -45,10 +41,8 @@ namespace IntermediateTest2.Domain.Tests.Entities
                 MonthlySalary = 7000M
             };
 
-            var validationErrors = employee.IsValid();
-
+            Assert.False(employee.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.True(validationErrors.Any());
         }
     }
 }

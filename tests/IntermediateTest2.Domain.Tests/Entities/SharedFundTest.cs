@@ -14,25 +14,21 @@ namespace IntermediateTest2.Domain.Tests.Entities
             var sharedFund = new SharedFund
             {
                 EmployeeId = 1,
-                Value = 560M,
                 ContributionDate = DateTime.Now
             };
 
-            var validationErrors = sharedFund.IsValid();
-
+            Assert.True(sharedFund.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.False(validationErrors.Any());
         }
 
         [Fact]
         public void SharedFund_InvalidRequired()
         {
             var sharedFund = new SharedFund();
-            var validationErrors = sharedFund.IsValid();
 
+            Assert.False(sharedFund.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.True(validationErrors.Any());
-            Assert.Equal(3, validationErrors.Count());
+            Assert.Equal(2, validationErrors.Count());
         }
     }
 }

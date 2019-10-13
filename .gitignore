@@ -13,3 +13,10 @@
 /src/IntermediateTest2.Infra.Data/obj
 /src/IntermediateTest2.Service.Api/bin/Debug/netcoreapp2.2
 /src/IntermediateTest2.Service.Api/obj
+/.vs
+/src/IntermediateTest2.Application/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Application/obj
+/src/IntermediateTest2.Infra.Security/bin/Debug/netcoreapp2.2
+/src/IntermediateTest2.Infra.Security/obj
+/tests/IntermediateTest2.Application.Tests/bin/Debug/netcoreapp2.2
+/tests/IntermediateTest2.Application.Tests/obj

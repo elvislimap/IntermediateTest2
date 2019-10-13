@@ -1,4 +1,6 @@
-﻿using IntermediateTest2.Service.Api.Commons;
+﻿using IntermediateTest2.Infra.CrossCutting.Ioc;
+using IntermediateTest2.Service.Api.Commons;
+using IntermediateTest2.Service.Api.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +19,8 @@ namespace IntermediateTest2.Service.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.RegisterServices(Configuration);
+            services.RegisterServicesApi(Configuration);
+            services.RegisterServicesIoc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -25,6 +28,7 @@ namespace IntermediateTest2.Service.Api
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
+            app.UseExceptionHandler(config => config.DefaultExceptionHandler());
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();
         }

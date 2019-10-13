@@ -17,20 +17,17 @@ namespace IntermediateTest2.Domain.Tests.Entities
                 AdjustmentDate = DateTime.Now
             };
 
-            var validationErrors = inflationAdjust.IsValid();
-
+            Assert.True(inflationAdjust.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.False(validationErrors.Any());
         }
 
         [Fact]
         public void InflationAdjust_InvalidRequired()
         {
             var inflationAdjust = new InflationAdjust();
-            var validationErrors = inflationAdjust.IsValid();
 
+            Assert.False(inflationAdjust.IsValid(out var validationErrors));
             Assert.NotNull(validationErrors);
-            Assert.True(validationErrors.Any());
             Assert.Equal(2, validationErrors.Count());
         }
     }

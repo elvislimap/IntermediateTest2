@@ -7,8 +7,8 @@ namespace IntermediateTest2.Domain.ValueObjects
         public Result(object ret = null, List<string> messages = null, List<ValidationError> validationErrors = null)
         {
             Return = ret;
-            MessageErrors = messages;
-            ValidationErrors = validationErrors;
+            MessageErrors = messages ?? new List<string>();
+            ValidationErrors = validationErrors ?? new List<ValidationError>();
         }
 
         public object Return { get; set; }

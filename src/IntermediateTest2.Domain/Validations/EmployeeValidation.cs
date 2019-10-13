@@ -8,11 +8,14 @@ namespace IntermediateTest2.Domain.Validations
 {
     public static class EmployeeValidation
     {
-        public static List<ValidationError> IsValid(this Employee employee)
+        public static bool IsValid(this Employee employee, out List<ValidationError> validationErrors)
         {
-            var requiredValidation = Required(employee);
+            validationErrors = Required(employee);
+            if (validationErrors.Any())
+                return false;
 
-            return requiredValidation.Any() ? requiredValidation : Valid(employee);
+            validationErrors = Valid(employee);
+            return !validationErrors.Any();
         }
 
         private static List<ValidationError> Required(Employee employee)

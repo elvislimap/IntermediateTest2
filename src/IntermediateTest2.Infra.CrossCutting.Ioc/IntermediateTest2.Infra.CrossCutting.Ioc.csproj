@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IntermediateTest2.Application\IntermediateTest2.Application.csproj" />
+    <ProjectReference Include="..\IntermediateTest2.Domain\IntermediateTest2.Domain.csproj" />
+    <ProjectReference Include="..\IntermediateTest2.Infra.Data\IntermediateTest2.Infra.Data.csproj" />
+    <ProjectReference Include="..\IntermediateTest2.Infra.Security\IntermediateTest2.Infra.Security.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
       <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>

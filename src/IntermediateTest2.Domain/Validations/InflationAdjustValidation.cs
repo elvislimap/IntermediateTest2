@@ -2,14 +2,16 @@
 using IntermediateTest2.Domain.Validations.Commons;
 using IntermediateTest2.Domain.ValueObjects;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IntermediateTest2.Domain.Validations
 {
     public static class InflationAdjustValidation
     {
-        public static List<ValidationError> IsValid(this InflationAdjust inflationAdjust)
+        public static bool IsValid(this InflationAdjust inflationAdjust, out List<ValidationError> validationErrors)
         {
-            return Required(inflationAdjust);
+            validationErrors = Required(inflationAdjust);
+            return !validationErrors.Any();
         }
 
         private static List<ValidationError> Required(InflationAdjust inflationAdjust)
